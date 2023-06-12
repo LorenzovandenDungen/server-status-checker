@@ -1,109 +1,70 @@
-Om AdminLTE te implementeren in een ReactJS-project, volg je de onderstaande stappen:
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
+In the project directory, you can run:
 
-Maak een nieuw ReactJS-project: Initialiseer een nieuw React-project met behulp van Create React App (CRA) of een andere tool naar keuze. Navigeer naar de projectmap in je terminal.
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-Installeer AdminLTE: Voer het volgende commando uit in de terminal om AdminLTE te installeren via npm:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-npm install admin-lte@3.1.0 --save
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
-Importeer de benodigde bestanden: Open het hoofdbestand van je React-app (meestal src/index.js of src/index.jsx) en importeer de CSS- en JS-bestanden van AdminLTE. Voeg de volgende regels toe aan het begin van het bestand:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-import 'admin-lte/dist/css/adminlte.css';
-import 'admin-lte/dist/js/adminlte.js';
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
+### Making a Progressive Web App
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
+### Advanced Configuration
 
-Pas de componenten aan: Open het hoofdcomponent van je app (bijvoorbeeld src/App.js of een andere component die je als hoofdlay-out gebruikt) en gebruik de AdminLTE-structuur en -componenten om je interface op te bouwen. Je kunt de AdminLTE-documentatie raadplegen voor details over de beschikbare componenten en hun gebruik.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
+### Deployment
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+### `npm run build` fails to minify
 
-Hier is een voorbeeld van hoe je de structuur kunt opzetten:
-
-
-
-import React from 'react';
-
-function App() {
-  return (
-    <div className="wrapper">
-      {/* Header */}
-      <nav className="main-header navbar navbar-expand navbar-white navbar-light">
-        {/* Navbar content */}
-      </nav>
-
-      {/* Sidebar */}
-      <aside className="main-sidebar sidebar-dark-primary elevation-4">
-        {/* Sidebar content */}
-      </aside>
-
-      {/* Content */}
-      <div className="content-wrapper">
-        {/* Page content */}
-      </div>
-
-      {/* Footer */}
-      <footer className="main-footer">
-        {/* Footer content */}
-      </footer>
-    </div>
-  );
-}
-
-export default App;
-
-
-
-
-Pas de inhoud van de verschillende secties aan op basis van je behoeften en voeg je eigen React-componenten toe.
-
-
-
-
-
-
-Voeg aangepaste stijlen toe: Om aangepaste stijlen toe te voegen, kun je een nieuw CSS-bestand maken en importeren in je hoofdcomponent. Plaats de importregel bovenaan je componentbestand en gebruik klassen en stijlregels om je eigen stijlen toe te passen.
-
-
-
-import React from 'react';
-import './App.css'; // Voeg deze regel toe
-
-// Rest van de code
-
-
-
-
-Je kunt ook inline-stijlen gebruiken in je componenten door de style-prop te gebruiken.
-
-
-
-
-
-
-Voeg functionaliteit toe: Implementeer event handlers, navigatie, en andere logica op basis van de vereisten van je app. Je kunt gebruikmaken van de React Hooks API of klassieke componenten om de functionaliteit te implementeren.
-
-
-
-
-Met deze stappen zou je AdminLTE moeten kunnen implementeren in je ReactJS-project. Zorg ervoor dat je de benodigde bestanden importeert en de structuur en componenten van AdminLTE aanpast aan je specifieke behoeften. Vergeet niet de AdminLTE-documentatie te raadplegen voor meer informatie over de beschikbare componenten en functionaliteiten.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

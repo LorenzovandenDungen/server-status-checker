@@ -1,24 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const ServerStatus = () => {
-  const [status, setStatus] = useState('');
+const ServerStatus = ({ ipAddress }) => {
+  const [status, setStatus] = useState("offline");
 
-  const checkServerStatus = async () => {
-    try {
-      const response = await fetch('/api/status');
-      const data = await response.json();
-      setStatus(data.status);
-    } catch (error) {
-      console.error('Error checking server status:', error);
-      setStatus('Error');
-    }
-  };
+  useEffect(() => {
+    const checkServerStatus = async () => {
+      try {
+        const response = await axios.get(`http://${ipAddress}`);
+        if (response.status === 200) {
+          setStatus("online");
+        } else {
+          setStatus("offline");
+        }
+      } catch (error) {
+        setStatus("offline");
+      }
+    };
+    checkServerStatus();
+    const intervalId = setInterval(checkServerStatus, 5000); // check server status every 5 seconds
+    return () => clearInterval(intervalId);
+  }, [ipAddress]);
 
   return (
-    <div>
-      <button onClick={checkServerStatus}>Check Server Status</button>
-      <p>Server Status: {status}</p>
-    </div>
+    <span style={{ color: status === "online" ? "green" : "red" }}>
+      {status}
+    </span>
   );
 };
 

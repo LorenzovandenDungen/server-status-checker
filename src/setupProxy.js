@@ -4,7 +4,8 @@ module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://192.168.1.1', // Replace with your actual server URL
+      target: 'https://your-platformos-instance.com/',
+      secure: false,
       changeOrigin: true,
     })
   );

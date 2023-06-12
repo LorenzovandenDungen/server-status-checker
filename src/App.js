@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ServerStatus from './components/ServerStatus';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
 import './App.css';
 
 const App = () => {
@@ -25,16 +28,12 @@ const App = () => {
   return (
     <div className="wrapper">
       {/* Sidebar */}
-      <aside className="main-sidebar">
-        {/* Add your sidebar content here */}
-      </aside>
+      <Sidebar />
 
       {/* Content */}
       <div className="content-wrapper">
         {/* Header */}
-        <header className="main-header">
-          {/* Add your header content here */}
-        </header>
+        <Header />
 
         {/* Page content */}
         <div className="content">
@@ -50,9 +49,7 @@ const App = () => {
         </div>
 
         {/* Footer */}
-        <footer className="main-footer">
-          {/* Add your footer content here */}
-        </footer>
+        <Footer />
       </div>
     </div>
   );

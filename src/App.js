@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import ServerStatus from './components/ServerStatus';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -9,14 +10,12 @@ const App = () => {
   const [serverData, setServerData] = useState([]);
 
   useEffect(() => {
-    // Simulating API fetch call
     const fetchServerStatus = async () => {
       try {
-        // Make your API call here to fetch server status data
-        // Example using fetch:
-        const response = await fetch('YOUR_SERVER_STATUS_API_ENDPOINT');
-        const data = await response.json();
-        setServerData(data);
+        const response = await axios.get(
+          'https://api.example.com/rest-endpoint' // Replace with the actual REST endpoint URL
+        );
+        setServerData(response.data);
       } catch (error) {
         console.log('Error fetching server status:', error);
       }
